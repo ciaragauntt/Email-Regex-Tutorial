@@ -37,15 +37,15 @@ then we will break it down throughout the tutorial.
 Anchors are super important in regular expressions matching a position before or after characters. In this 
 regex we use the anchors ^ and $.
 
-^ : the beginning of the email adress
-$ : the end of the email address
+^ : the beginning of the email adress <br />
+$ : the end of the email address <br />
 
 ### Quantifiers
 Quantifiers in regular expressions help specify how many instances of a character, group, or character class
 must be present. The quantifiers in the email regex is + and {2,6}.
 
-+ : shows that there is another sequence to be matched 
-{2,6} : specifies that the input should be at least 2 characters and a maximum of 6 characters. 
+"+" : shows that there is another sequence to be matched <br />
+{2,6} : specifies that the input should be at least 2 characters and a maximum of 6 characters.<br />
 
 ## OR Operator
 There is not an OR Operator in the email regax, but I will explain it anyway. OR Operators are used to match one of multiple
@@ -56,44 +56,44 @@ Character classes are used to tell the regex engine to match only one out of sev
 engine find a word even if it is misspelled or written in another language. The character classes in the email regex 
 are inside the brackets.
 
-a-z : telling the regex engine letters a-z inclusive in lower case
-0-9 : telling the regex engine that numbers 0-9 are inclusive 
-_ : telling the regex engine that you can use an underscore
-\. : telling the regex engine that you can use a "."
+a-z : telling the regex engine letters a-z inclusive in lower case <br />
+0-9 : telling the regex engine that numbers 0-9 are inclusive <br />
+_ : telling the regex engine that you can use an underscore <br />
+\. : telling the regex engine that you can use a "." <br />
 
 ### Flags
 There are no flags in this expression, but I will explain what they are anyway. Flags are components of the expression that
 affect the search. Below are a list of the flags that can be used and their specific function.
 
-i : this flag states that the search is case insensitive; meaning there is no difference between "a" and "A".
-g : this flag states that the search looks for all matches, without it only the first match is returned.
-m : this flag states that it is a multiline code
-s : this flag enables the "dotall" mode that allows a "." to match a newline character.
-u : this flag enables unicode support and correct processing of surrogate pairs.
-y : this flag enables "sticky" mode where is will search at the exact position of the text.
+i : this flag states that the search is case insensitive; meaning there is no difference between "a" and "A". <br />
+g : this flag states that the search looks for all matches, without it only the first match is returned. <br />
+m : this flag states that it is a multiline code <br />
+s : this flag enables the "dotall" mode that allows a "." to match a newline character. <br />
+u : this flag enables unicode support and correct processing of surrogate pairs. <br />
+y : this flag enables "sticky" mode where is will search at the exact position of the text. <br />
 
 ### Grouping and Capturing
 A group in a regex ecpression is anything that is enclosed in parantheses. Grouping is used to create blocks of patterns
 so you can add other modifiers to them as a singular or as a whole. The email regex uses grouping at ([a-z0-9_\.-]+) and
 ([\da-z\.-]+) and ([a-z\.]{2,6}).
 
- ([a-z0-9_\.-]+) : matches the users email name
- ([\da-z\.-]+) : matches the email service being used
- ([a-z\.]{2,6}) : captures the ".com"
+ ([a-z0-9_\.-]+) : matches the users email name <br />
+ ([\da-z\.-]+) : matches the email service being used <br />
+ ([a-z\.]{2,6}) : captures the ".com" <br />
 
 ### Bracket Expressions
 Brackets indicate a set of characters to match. Each individiual character in the brackets will match. Bracket
 expressions used in the email regax are [a-z0-9_\.-] and [\da-z\.-] and [a-z\.] .
 
-[a-z0-9_\.-] : matching letters a-z is case sensitive while also matching characters 0-9, _ , and -
-[\da-z\.-] : matching a single digit from 0-9, any character a-z case sensitive, and characters "." and "-"
-[a-z\.] : matchigng the characters a-z case sensitive and the character "."
+[a-z0-9_\.-] : matching letters a-z is case sensitive while also matching characters 0-9, _ , and - <br />
+[\da-z\.-] : matching a single digit from 0-9, any character a-z case sensitive, and characters "." and "-" <br />
+[a-z\.] : matchigng the characters a-z case sensitive and the character "." <br />
 
 ### Greedy and Lazy Match
 Greedy means the longest possible string while lazy means the shortest possible string. 
 
-+ : greedy quantifier will match as many times as possible 
-{} : greedy quanitifier matching 2,6 for the last capture group
+"+" : greedy quantifier will match as many times as possible <br />
+{} : greedy quanitifier matching 2,6 for the last capture group <br />
 
 ### Boundaries
 There are no boundaries in this expression, but I will still give a short explanation. There are three different positions 
