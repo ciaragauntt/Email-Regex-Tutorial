@@ -87,7 +87,7 @@ expressions used in the email regax are [a-z0-9_\.-] and [\da-z\.-] and [a-z\.] 
 
 [a-z0-9_\.-] : matching letters a-z is case sensitive while also matching characters 0-9, _ , and - <br />
 [\da-z\.-] : matching a single digit from 0-9, any character a-z case sensitive, and characters "." and "-" <br />
-[a-z\.] : matchigng the characters a-z case sensitive and the character "." <br />
+[a-z\.] : matching the characters a-z case sensitive and the character "." <br />
 
 ### Greedy and Lazy Match
 Greedy means the longest possible string while lazy means the shortest possible string. 
